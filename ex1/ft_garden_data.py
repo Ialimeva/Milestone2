@@ -1,12 +1,15 @@
 class Plant:
-    def __init__(self, name: str, height: int, age: int):
-        self.name = name
+    def __init__(self,
+                 name: str,
+                 height: int,
+                 age: int
+                 ) -> None:
+        self.name = name.capitalize()
         self.height = height
         self.Age = age
 
-    def show(self):
-        name_cap: str = self.name.capitalize()
-        print(f"{name_cap}: {self.height}cm, {self.Age} days old")
+    def show(self) -> None:
+        print(f"{self.name}: {self.height}cm, {self.Age} days old")
 
 
 def ft_garden_data() -> None:
